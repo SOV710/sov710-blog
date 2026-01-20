@@ -1,0 +1,3 @@
+* SOV710's blog
+
+SSG, convert org-mode files to HTML, totally written in rust
