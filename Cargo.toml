@@ -1,0 +1,16 @@
+[package]
+name = "sov710-blog"
+version = "0.0.1"
+edition = "2024"
+description = "SOV710's blog, deployed at sov710.org/blog."
+readme = "README.org"
+repository = "https://github.com/SOV710/sov710-blog"
+license = "MIT OR Apache-2.0"
+keywords = ["blog", "org-mode", "orgmode", "ssg", "static-site"]
+categories = ["web-programming"]
+build = false
+exclude = ["/.github"]
+include = ["/Cargo.lock", "/src"]
+
+[dependencies]
+orgize = "0.10"
