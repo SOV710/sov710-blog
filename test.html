@@ -1,0 +1,65 @@
+<main><section></section><h1>Probability</h1><section><p></p></section><h2>Fundamental Concepts</h2><section><p></p><p>A <b>sample space</b>  is the set of all possible outcomes of an experiment.
+</p><p>Points in  are called <b>sample outcomes</b>, <b>realizations</b>, or <b>elements</b>.
+</p><p><b>Events</b> are subsets of $&Omega;$.
+</p><p>Basic set operations include <b>complement</b>, <b>union</b>, <b>intersection</b>, <b>set difference</b>, and <b>set inclusion</b>.
+</p><p>The <b>null event</b> and <b>true event</b> represent impossible and certain outcomes respectively.
+</p><p>Events are <b>disjoint</b> or <b>mutually exclusive</b> if their intersection is the null event.
+</p><p>A <b>partition</b> of  is a sequence of disjoint sets  such that $\bigcup<sub>i=1</sub>^{&infin;} A<sub>i</sub> = &Omega;$.
+</p><p>The <b>indicator function</b> of  is defined as $I<sub>A</sub>(&omega;) = I(&omega; &isin; A) = _{\{&omega; &isin; A\}}$.
+</p><p>A sequence of sets is <b>monotone increasing</b> if $A<sub>1</sub> \subseteq A<sub>2</sub> \subseteq A<sub>3</sub> \subseteq &ctdot;$, and <b>monotone decreasing</b> if $A<sub>1</sub> \supseteq A<sub>2</sub> \supseteq A<sub>3</sub> \supseteq &ctdot;$.
+</p></section><h2>Axioms of Probability</h2><section><p></p><p>The <b>probability</b> of  is a real number  assigned to every event $A$, which satisfies the following three axioms:
+</p><ol><li><p><b>Non-negativity</b>:  for every 
+</p></li><li><p><b>Normalization</b>: 
+</p></li><li><p><b>Countable additivity</b>: If  are disjoint, then
+   
+</p></li></ol></section><h2>Interpretations of Probability</h2><section><p></p><p>There are two common interpretations of $(A)$: <b>frequencies</b> and <b>degrees of belief</b>.
+ links statistics and probability under the frequency interpretation.
+</p><p>The difference in interpretation does not matter much until we deal with <b>statistical inference</b>, which gives rise to two schools: the <b>frequentist school</b> and the <b>Bayesian school</b> .
+</p></section><h2>Basic Properties</h2><section><p></p><p>From the axioms, we can derive:
+</p><ul><li><p>(\varnothing) = 0$
+</p></li><li><p>A &sub; B \quad &rArr; \quad (A) &le; (B)$
+</p></li><li><p>0 &le; (A) &le; 1$
+</p></li><li><p>(A<sup>c</sup>) = 1 - (A)$
+</p></li><li><p>A &cap; B = \varnothing \quad &rArr; \quad (A &cup; B) = (A) + (B)$
+</p></li></ul><p><b>Lemma</b>: For any events  and $B$,
+
+</p><p><b>Theorem</b> (Continuity of Probabilities):
+</p><p>This result depends only on Axiom 3. If $A<sub>n</sub> &rarr; A$, then  as $n &rarr; &infin;$.
+</p></section><h2>Uniform Probability Distribution</h2><section><p></p><p>For a finite sample space  where each outcome is equally likely, the <b>uniform probability distribution</b> is given by
+
+</p><p>This motivates the use of <b>combinatorial numbers</b> as counting tools.
+</p><p>The <b>binomial coefficient</b> &quot;n choose k&quot; is
+
+</p><p>Important properties include:
+</p><ul><li><p>
+</p></li><li><p>
+</p></li></ul></section><h2>Independence</h2><section><p></p><p>Two events  and  are <b>independent</b> if
+
+and we write $A &perp; B$. If they are not independent, we write $A &not;\!&perp; B$.
+</p><p>Independence can arise in two distinct ways:
+</p><ul><li><p>Sometimes we explicitly <b>assume</b> that two events are independent.
+</p></li><li><p>In other instances, we <b>derive</b> independence by verifying that $(AB) = (A)(B)$.
+</p></li></ul><p><b>Important conclusion</b>: Disjoint events with positive probability are <i>not</i> independent.
+</p></section><h2>Conditional Probability</h2><section><p></p><p><b>Definition</b>: If $(B) &gt; 0$, then the <b>conditional probability</b> of  given  is
+
+</p></section><h3>Prosecutor&apos;s Fallacy</h3><section><p></p><p>The <b>prosecutor&apos;s fallacy</b> arises from confusing  with $(B \mid A)$:
+</p><ul><li><p>&quot;If you are innocent, the probability of seeing this evidence is extremely small.&quot;
+</p></li><li><p>is incorrectly inferred as
+</p></li><li><p>&quot;Given this evidence, the probability that you are innocent is extremely small.&quot;
+</p></li></ul><p>Note that  is a legal probability measure that satisfies the axioms of probability, but  does not satisfy the axioms as a function of its second argument.
+</p></section><h3>Basic Results</h3><section><p></p><p><b>Lemma</b>: For any events  and  with $(B) &gt; 0$,
+
+</p><p><b>The Law of Total Probability</b>: Let  be a partition of $&Omega;$. Then
+
+</p><p><b>Bayes&apos; Theorem</b>:
+
+</p><p>The <b>prior probability</b>  represents our judgment before seeing the data, while the <b>posterior probability</b>  represents our updated judgment after observing the data.
+</p></section><h2>Measurable Spaces and Probability Spaces</h2><section><p></p><p>Assigning probabilities to all subsets of  is not always feasible. Therefore, we restrict attention to a collection of events called a <b>σ-algebra</b> or <b>σ-field</b>.
+</p><p>A class  is a σ-algebra if it satisfies:
+</p><ol><li><p>$\varnothing &isin; $: The impossible event must be measurable.
+</p></li><li><p>If $A_1, A_2, &hellip; &isin; $, then $\bigcup<sub>i=1</sub>^{&infin;} A<sub>i</sub> &isin; $: Closed under countable unions.
+</p></li><li><p>$A &isin;  &rArr; A<sup>c</sup> &isin; $: Closed under complementation.
+</p></li></ol><p>The sets in  are said to be <b>measurable</b>. We call  a <b>measurable space</b>.
+</p><p>If  is a <b>probability measure</b> defined on $$, then  is called a <b>probability space</b>.
+</p><p>The <b>Borel σ-field</b> is a particularly important example of a σ-algebra in practice.
+</p></section></main>
